@@ -1,23 +1,23 @@
-import React,{Component} from "react";
-import {View,Text,StyleSheet} from "react-native";
+import React, {Component} from 'react';
+import Icon from "react-native-vector-icons/Ionicons"
+import { createStackNavigator } from "react-navigation";
+import Profile  from "./Profile"
+import Settings from "./Settings"
 
-export default class Profile extends Component {
-    render() {
-        return (
-            <View style={styles.container} >
-                <Text >
-                    Profile User Screen
-                </Text>
-            </View>
-        )
-    }
-}
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#FCC9B9"
-    }
+const ProfileNavigator = createStackNavigator({
+    Profile : {
+        screen : Profile,
+        navigationOptions: {
+            tabBarIcon :  ({tintColor})  =>  <Icon name="md-heart" size={50} color={tintColor} />,
+        }
+    },
+    Settings : {
+        screen : Settings,
+        navigationOptions: {
+            tabBarIcon :  ({tintColor})  =>  <Icon name="ios-person" size={50} color={tintColor} />,
+        }
+    },
 });
+
+export default ProfileNavigator;
