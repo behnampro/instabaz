@@ -3,7 +3,7 @@ import Icon from "react-native-vector-icons/Ionicons"
 import {createBottomTabNavigator, createAppContainer} from "react-navigation";
 import Home  from "./pages/HomeUser"
 import Camera from "./pages/Camera"
-import Profile from "./pages/Profile"
+import ProfileNavigator from "./pages/Profile"
 import Search from "./pages/Search"
 import Follow from "./pages/Follow"
 
@@ -15,7 +15,7 @@ const TabNavigator = createBottomTabNavigator({
     }
   },
   Search : {
-    screen : Follow,
+    screen : Search,
     navigationOptions: {
       tabBarIcon : ({tintColor}) =>  <Icon name="md-search" size={50} color={tintColor} />,
     }
@@ -33,7 +33,7 @@ const TabNavigator = createBottomTabNavigator({
     }
   },
   Profile : {
-    screen : Home,
+    screen : ProfileNavigator,
     navigationOptions: {
       tabBarIcon :  ({tintColor})  =>  <Icon name="ios-person" size={50} color={tintColor} />,
     }
