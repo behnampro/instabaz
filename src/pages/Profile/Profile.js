@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import {View,Text,StyleSheet,Platform,Button,Image,TouchableOpacity} from "react-native";
 import Icon from "react-native-vector-icons/Ionicons"
-import EStyleSheet from "react-native-extended-stylesheet";
+import TabProfileView from "./ProfileTab";
 
 export default class Profile extends Component {
 
@@ -26,16 +26,16 @@ export default class Profile extends Component {
                     <View style={styles.containerInfo}>
                         <View style={styles.profileInfo}>
                             <View style={styles.profileInfoTextNumber}>
-                                <Text style={styles.profileInfoNumber}>129</Text>
+                                <Text style={styles.profileInfoNumber}>85</Text>
                                 <Text style={styles.profileInfoText}>پست ها</Text>
                             </View>
                             <View style={styles.profileInfoTextNumber}>
-                                <Text style={styles.profileInfoNumber}>129</Text>
-                                <Text style={styles.profileInfoText}>پست ها</Text>
+                                <Text style={styles.profileInfoNumber}>300</Text>
+                                <Text style={styles.profileInfoText}>دنبال‌کننده</Text>
                             </View>
                             <View style={styles.profileInfoTextNumber}>
-                                <Text style={styles.profileInfoNumber}>129</Text>
-                                <Text style={styles.profileInfoText}>پست ها</Text>
+                                <Text style={styles.profileInfoNumber}>385</Text>
+                                <Text style={styles.profileInfoText}>دنبال‌شونده</Text>
                             </View>
                         </View>
                         <View style={{ height : 60 , alignItems: 'center' , flexDirection : 'row' , marginLeft : 20 , marginRight : 20, marginTop : 0, paddingTop: 0 , marginBottom:20}}>
@@ -45,10 +45,8 @@ export default class Profile extends Component {
                         </View>
                     </View>
                 </View>
-                <View>
-                    <Text >
-                        Profile hjhjh Screen
-                    </Text>
+                <View style={{height:500}}>
+                    <TabProfileView/>
                 </View>
             </View>
         )
